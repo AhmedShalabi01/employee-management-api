@@ -4,7 +4,6 @@ import com.springcourse.employeecrud.entity.Employee;
 import com.springcourse.employeecrud.repo.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,13 +27,11 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employeeRepository.findById(id).orElseThrow();
     }
 
-    @Transactional
     @Override
     public Employee save(Employee employee) {
         return employeeRepository.save(employee);
     }
 
-    @Transactional
     @Override
     public void deleteById(int id) {
         employeeRepository.deleteById(id);
