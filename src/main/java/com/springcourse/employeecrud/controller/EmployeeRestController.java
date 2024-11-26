@@ -1,6 +1,5 @@
 package com.springcourse.employeecrud.controller;
 
-import com.springcourse.employeecrud.dao.EmployeeDAO;
 import com.springcourse.employeecrud.entity.Employee;
 import com.springcourse.employeecrud.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
