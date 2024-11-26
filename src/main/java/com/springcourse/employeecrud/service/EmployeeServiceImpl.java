@@ -1,6 +1,5 @@
 package com.springcourse.employeecrud.service;
 
-import com.springcourse.employeecrud.dao.EmployeeDAO;
 import com.springcourse.employeecrud.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
