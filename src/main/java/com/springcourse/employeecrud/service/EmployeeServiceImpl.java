@@ -2,6 +2,7 @@ package com.springcourse.employeecrud.service;
 
 import com.springcourse.employeecrud.entity.Employee;
 import com.springcourse.employeecrud.repo.EmployeeRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public Employee findById(int id) {
-        return employeeRepository.findById(id).orElseThrow();
+        return employeeRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override
